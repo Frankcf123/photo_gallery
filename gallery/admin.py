@@ -7,6 +7,7 @@ class PhotoInline(admin.StackedInline):
 
 class ItemAdmin(admin.ModelAdmin):
     inlines=[PhotoInline]
+    list_display = ('name',)
 
 admin.site.register(Item,ItemAdmin)
 admin.site.register(Photo)
